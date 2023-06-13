@@ -4,7 +4,6 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import projectDatas from '../../data/portfolio.json';
 
 const ProjectsSlider = (props) => {
   SwiperCore.use([Pagination, Navigation, Autoplay]);
