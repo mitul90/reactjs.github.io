@@ -1,0 +1,78 @@
+.portfolio-block{ 
+  display: block;
+  text-align: center;  
+  overflow: hidden;
+  box-shadow: 1px 20px 30px rgba(0, 0, 0, 0.05); 
+  @include transition(0.4s);  
+  @include border-radius(6px);
+  text-decoration: none;
+  margin-bottom: 24px;
+  .portfolio-img{
+    overflow: hidden;
+    display: block;
+    img{
+      width:100%;
+      height: auto;
+    }
+  }
+  strong{
+    font-weight: 600;
+    padding: 8px;
+    display: block;
+    background: #fff;
+    color: $secondary-color;
+    border-top: 1px solid #ddd;
+  }
+  &:hover{
+    box-shadow: 1px 20px 30px rgba(0, 0, 0, 0.15); 
+    text-decoration: none;
+    img{
+      @include scale(1.05);
+      @include transition(0.5s);
+    }
+  }
+}
+/**** Portfolio Detail ****/
+.category-row{
+  h5{
+    display: inline-block;
+  }
+}
+.portfolio-desc-sec{ 
+  &:not(:last-child){
+    border-bottom: 1px dashed #cdcdcd;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+}
+.port-badge{
+  display:inline-block;
+  margin:0px 5px 5px 0px;
+  padding:0px 8px;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+  @include border-radius(10px);
+  &:hover{
+    background-color:$secondary-color;
+    color: $white-color;
+    cursor: pointer;
+  }
+}
+
+.single-port-img{
+  box-shadow: 1px 20px 30px rgba(0, 0, 0, 0.05); 
+  @include transition(0.4s);
+  @include border-radius(6px);
+  border: 10px solid $white-color;
+  @include media-breakpoint-down(lg){
+    margin-bottom: 26px;
+  }
+  &:hover{
+    box-shadow: 1px 20px 30px rgba(0, 0, 0, 0.15); 
+    cursor: pointer;
+  }
+}
+
+.postContent{
+  pointer-events: none;
+}

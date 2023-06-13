@@ -1,0 +1,46 @@
+// Import Fonts:
+@import "../css/poppins.css";
+
+/****Font icon****/
+@import "../font-awesome/scss/fontawesome.scss";
+@import "../font-awesome/scss/light.scss";
+
+// Bootstrap 5.1:
+@import "variables";
+@import "bootstrap";
+
+// swiper slider:
+@import "./node_modules/swiper/swiper.scss";
+@import "./node_modules/swiper/modules/navigation/navigation.scss";
+@import "./node_modules/swiper/modules/pagination/pagination.scss";
+
+// Project's custom variables or mixin:
+@import "functions";
+@import "mixins";
+@import "keyframes";
+@import "custom";
+
+// layouts:
+@import "layout";
+
+
+// sections:
+@import "sections/header";
+@import "sections/footer";
+
+// pages:
+@import "pages/home";
+@import "pages/about";
+@import "pages/portfolio";
+@import "pages/services";
+@import "pages/contact";
+@import "pages/404";
+
+// widget:
+@import "sections/widget";
+
+// core
+@import "core/project-sitemap";
+
+// Override anything at last:
+@import "overrides";

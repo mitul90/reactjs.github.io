@@ -1,0 +1,105 @@
+/*** Font Family  ***/
+$font-body: 'Poppins', sans-serif;
+
+/*** Color Palette ***/
+$primary-color: #f72a85; 
+$secondary-color: #2E4057;
+$white-color: #ffffff;
+
+@mixin body-font {font-family:$font-body;font-size:16px;font-weight:400;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;color:#303669}
+
+/*** Font-size as h1-h5 headings ***/
+@mixin font-xl {@include fluid-type($min_width, $max_width, 42px, 52px);font-weight:700;}
+@mixin font-lg {@include fluid-type($min_width, $max_width, 30px, 40px);font-weight:700;}
+@mixin font-md {font-size:28px;font-weight:600;}
+@mixin font-sm {/*font-size:22px;font-weight:400;*/}
+@mixin font-xs {/*font-size:19px;font-weight:400;*/}
+@mixin font-xxs {/*font-size:14px;font-weight:600;*/}
+
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; -o-border-radius: $radius;	border-radius: $radius; }
+@mixin opacity($opacity) { -webkit-opacity:$opacity; -moz-opacity:$opacity; -o-opacity:$opacity; -m-opacity:$opacity; opacity:$opacity; }
+@mixin transition($seconds) { -webkit-transition: all $seconds ease; -moz-transition: all $seconds ease; -ms-transition: all $seconds ease; -o-transition: all $seconds ease; transition: all $seconds ease; }
+@mixin trans-anim-none { -webkit-transition:none; -moz-transition:none; -o-transition:none; transition:none; }
+@mixin space-none { margin:0; padding:0; }
+@mixin app-none { -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; -ms-appearance: none; appearance: none;}
+@mixin point-none { -webkit-pointer-events:none; -moz-pointer-events:none; -o-pointer-events:none; -ms-pointer-events:none; pointer-events:none; }
+
+/*** Background properties  ***/
+@mixin bg-cmn { background-position:top center; background-repeat:no-repeat; background-size: cover; }
+@mixin bg-parallax { background-attachment:fixed; @include bg-cmn; }
+
+:root {--swiper-theme-color:var(--bs-primary);}
+
+// Magic parallax mixins
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@mixin parallax-init(
+  $perspective  : $parallax-perspective,
+  $element      : $parallax-element,
+  $parallax-ios : $parallax-ios
+  ) {
+  @if $element == "body" {
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  #{$element} {
+    overflow: auto;
+    perspective: $perspective * 1px;
+    transform-style: preserve-3d;
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : $parallax-perspective
+  ) {
+  transform:
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  ;
+  z-index: $distance * 1000;
+}
+
+// End of magic parallax mixins
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 1400px;
+$min_font: 16px;
+$max_font: 16px;

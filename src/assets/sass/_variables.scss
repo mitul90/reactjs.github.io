@@ -1,0 +1,42 @@
+/*** Bootstrap color variable ***/
+$body-bg: #f7f7f7;
+$body-color: #80808a;
+$gray-base: #000 !default;
+$black-color:#000;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default;   // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$theme-colors: ("primary":#f72a85);
+
+/*** link color ***/
+$link-color:  $body-color !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+/*** Container ***/
+
+/*** Buttons ***/
+$btn-font-weight: normal !default;
+//$btn-border-radius:50px !default;
+
+/*** Forms Input ***/
+$input-bg: #f4f6fc !default;
+$input-bg-disabled: $gray-lighter !default;
+$input-color: $body-color !default;
+$input-border-width: 0px;
+$input-border-color:$body-color !default;
+$input-border-radius:18px !default;
+$input-focus-border-color: $body-color !default; 
+$input-focus-color: $body-color !default; 
+$input-placeholder-color: $body-color !default;
+$input-height:80px !default;
+$input-focus-box-shadow: 0 0 0 0.1rem rgba(10, 10, 10, 0.85) !default;
+$input-padding-y:10px;
+$input-btn-padding-y:10px;
+$input-btn-padding-x:20px;
+
+/*** form-group margin ***/
+$form-group-margin-bottom:15px !default;
+$breadcrumb-divider: "»";

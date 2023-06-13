@@ -1,0 +1,24 @@
+.about-row{
+  margin-bottom:50px;
+  align-items: center;
+  .about-img{
+    img{
+      height:auto;
+      @include media-breakpoint-down(lg){
+        width:350px;
+      }
+    }
+  }
+  .list-column2{
+    @include media-breakpoint-down(sm){
+      @include column-count(1);
+    }
+   }
+  @include media-breakpoint-up(lg){
+    &:nth-child(odd){
+      .about-content{
+        order: 2;      
+      }
+    }
+  }  
+}
