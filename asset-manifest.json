@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactjs.github.io/static/css/main.0891d7d5.css",
-    "main.js": "/reactjs.github.io/static/js/main.059d27f5.js",
+    "main.js": "/reactjs.github.io/static/js/main.994c5284.js",
     "static/js/313.23d96307.chunk.js": "/reactjs.github.io/static/js/313.23d96307.chunk.js",
     "static/js/522.68a08121.chunk.js": "/reactjs.github.io/static/js/522.68a08121.chunk.js",
     "static/media/fa-light-300.ttf": "/reactjs.github.io/static/media/fa-light-300.42781873fec059d77584.ttf",
@@ -52,6 +52,6 @@
   },
   "entrypoints": [
     "static/css/main.0891d7d5.css",
-    "static/js/main.059d27f5.js"
+    "static/js/main.994c5284.js"
   ]
 }
