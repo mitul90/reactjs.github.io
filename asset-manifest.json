@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reactjs.github.io/static/css/main.0891d7d5.css",
+    "main.css": "/reactjs.github.io/static/css/main.11f65889.css",
     "main.js": "/reactjs.github.io/static/js/main.994c5284.js",
     "static/js/313.23d96307.chunk.js": "/reactjs.github.io/static/js/313.23d96307.chunk.js",
     "static/js/522.68a08121.chunk.js": "/reactjs.github.io/static/js/522.68a08121.chunk.js",
@@ -51,7 +51,7 @@
     "index.html": "/reactjs.github.io/index.html"
   },
   "entrypoints": [
-    "static/css/main.0891d7d5.css",
+    "static/css/main.11f65889.css",
     "static/js/main.994c5284.js"
   ]
 }
